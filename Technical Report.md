@@ -3,17 +3,18 @@
 ### Migration Strategy for SQL Database Cluster on Azure
 
 #### High-Level Architecture Diagram
+
 #### Migration Phases
 1. Phase 1: Assessment
 Use Azure Migrate Database Assessment tool to:
-- Analyze the compatibility of the current SQL database schema and data with Azure SQL 2. Managed Instance or Azure SQL Database.
+- Analyze the compatibility of the current SQL database schema and data with Azure SQL Managed Instance.
 - Identify dependencies on legacy systems and connected applications.
 - Estimate the data size and identify performance bottlenecks.
 
 Phase 2: Planning
 1. Select Target:
 - Use Azure SQL Managed Instance for near-complete SQL Server feature parity.
-- Choose Azure SQL Database for a more scalable, PaaS-first solution.
+- For GlobalTech Solutions, the best option is Azure SQL Managed Instance due to its compatibility with the current on-premises SQL cluster and minimal migration effort required
 2. Define Migration Methodology:
 - For minimal downtime, use Azure Database Migration Service (DMS) in online migration mode.
 - Plan a fallback strategy in case of migration issues.
@@ -52,9 +53,21 @@ Phase 5: Optimization and Handover
 - Azure Monitor: For tracking performance metrics post-migration.
 - Azure Key Vault: For securing encryption keys.
 - Azure Security Center: For real-time threat detection and security assessments.
+
 #### Cost Estimation
 - Use Azure Pricing Calculator to estimate:
-1. Compute costs for Azure SQL Managed Instance or Azure SQL Database.
+1. Compute costs for Azure SQL Managed Instance
 2. Data storage costs based on data size and redundancy requirements.
 3. Network and egress costs for data migration and ongoing operations.
 4. Backup storage and disaster recovery options.
+
+#### Compliance and Security
+Data Protection:
+Enable TDE for data-at-rest encryption.
+Use Azure Private Link to secure data-in-transit.
+Disaster Recovery:
+Configure Azure SQL Geo-Replication for high availability and disaster recovery.
+Regularly test failover scenarios.
+Regulatory Compliance:
+Use Azure Compliance Manager to manage compliance requirements like GDPR and HIPAA.
+Implement role-based access control (RBAC) and detailed auditing logs.
