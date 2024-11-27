@@ -37,9 +37,24 @@ Phase 3: Execution
 - Use Query Performance Insights in Azure SQL.
 
 Phase 4: Validation
+- Validate data integrity and application connectivity.
+- Run end-to-end testing with connected systems.
+- Ensure all compliance measures are functional.
 
 Phase 5: Optimization and Handover
+- Configure Azure Auto-Scaling and Index Tuning Advisor.
+- Train operations teams on monitoring and managing Azure SQL databases.
+- Document all changes and hand over control to the operations team.
 
 #### Recommendations for Tools and Services
-
+- Azure Migrate: For initial assessment and readiness checks.
+- Azure Database Migration Service (DMS): For schema and data migration.
+- Azure Monitor: For tracking performance metrics post-migration.
+- Azure Key Vault: For securing encryption keys.
+- Azure Security Center: For real-time threat detection and security assessments.
 #### Cost Estimation
+- Use Azure Pricing Calculator to estimate:
+1. Compute costs for Azure SQL Managed Instance or Azure SQL Database.
+2. Data storage costs based on data size and redundancy requirements.
+3. Network and egress costs for data migration and ongoing operations.
+4. Backup storage and disaster recovery options.
