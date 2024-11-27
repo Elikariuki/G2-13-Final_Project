@@ -61,6 +61,10 @@ Phase 5: Optimization and Handover
 3. Network and egress costs for data migration and ongoing operations.
 4. Backup storage and disaster recovery options.
 
+Detialed Estimation: Place Holder
+
+
+
 #### Compliance and Security
 Data Protection:
 Enable TDE for data-at-rest encryption.
