@@ -9,6 +9,16 @@ This report provides a detailed migration strategy for the existing infrastructu
 ### Migration Phases
 Phase 1: Assessment
 
+#### ERP System Assessment
+During the assessment for the ERP system, we will assess and understand the current on-premise ERP system, document the ERP system components, integrations, dependencies, and configurations. The current monolithic ERP system contains all of its modules/business functions in one single application, and most likely share the same database. Understanding how these components interact with each other and with other systems will allow the company to carefully plan for a smooth migration, reducing potential risks and downtown. The company will also decide what services are no longer needed, and what services they want to kepe, expand and/or grow. Another key task is evaluating the current performance to ensure that the new ERP system can match or exceed it.
+
+Additionally, it is essential to define GlobalTech Solutions’ business goals, which involves determining which services and modules should be retained. What is the company’s main focus or motivation for this migration? Scalability, flexibility, cost-effectiveness, innovation, expansion, compliance?
+
+**Tools for Assessment**
+Azure Migrate: discover and assess on-premise workloads, and the suitability of moving workloads to the cloud
+- Azure Migrate: Server Assessment, Azure Migrate: Database Assessment
+<br/>Azure Advisor: A free tool that provides best practices to optimize cost, security, and performance
+
 
 ### Phase 2: Planning
 The table below shows the timeframe required for each task in the planning phase. The tasks can run concurrently, but the total duration is approximately 8-14 weeks
