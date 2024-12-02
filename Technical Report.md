@@ -53,6 +53,13 @@ The table below shows the timeframe required for each task in the planning phase
 |                                        | **Total Estimated Time**         | **8-14 weeks**     |
 
 
+#### ERP Migration Planning
+1. Decide on migration strategy
+  - We have decided that a replace/refactor strategy best suits this company’s goals as the monolithic ERP system is nearing the end of their support. This will make it difficult to use and maintain in the future, especially with the modules under one application and sharing a single database. Bug fixes and adding additional features, changes to the services will most likely require changes to the whole application, which will be time consuming and costly. Thus, using a cloud ERP system will be most suitable as it is fast, reduces capex expenditures, and reliable.
+
+2. Plan the migration
+  - We will have to look at the current system and pinpoint key services that the company will need, as well as dependencies on other services. This helps the company pick a suitable cloud ERP provider as well as an appropriate migration approach. We have decided on incremental migration as it is less disruptive, flexible, and is easier for testing and validation. 
+
 
 
 Phase 3: Execution
