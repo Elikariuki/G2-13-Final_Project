@@ -208,4 +208,8 @@ AKS:
 
 
 ### Compliance and Security
-
+Disaster Recovery:
+    - Configure Azure SQL Geo-Replication for high availability and disaster recovery.
+    - Regularly test failover scenarios.\
+Regulatory Compliance:
+    -Use Azure Compliance Manager to manage compliance requirements like GDPR and HIPAA.
