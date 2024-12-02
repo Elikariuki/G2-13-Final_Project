@@ -116,6 +116,20 @@ For the migration of the front-end application, we decided that a strategy of Li
 
 ### Phase 3: Execution
 
+#### Virtual Machines
+1. Prepare the source environment
+- Ensure all VMs are properly configured and patched.
+- Ensure all VMs are properly backed up.
+2. Prepare the target environment
+- Ensure all necessary resources are provisioned in Azure
+- Ensure all necessary networking and security configurations are in place
+3. Migrate VMs to Azure
+- Use Azure Migrate to migrate VMs to Azure
+- Use Azure Site Recovery to ensure business continuity during migration
+4. Test and validate migrated workloads
+- Test all migrated workloads to ensure they are functioning as expected
+- Validate all migrated workloads to ensure they meet the company's requirements
+
 #### ERP System
 1. Data Migration
   - Move data from the old ERP system to the new SaaS system
