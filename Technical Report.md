@@ -111,7 +111,7 @@ The table below shows the timeframe required for each task in the planning phase
 
 #### Phase 4: Validation
 
-#### SQL database cluster
+#### SQL Database Cluster
 - Validate data integrity and application connectivity.
 - Run end-to-end testing with connected systems.
 - Ensure all compliance measures are functional.
