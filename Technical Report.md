@@ -38,7 +38,7 @@ Due to the monolithic design of the application, the requirements that the compa
 
 By breaking down the application into microservices, containerizing them with Docker and orchestrating them using Azure Kubernetes Service (AKS), the requirements of the company are met. Transitioning to a microservice architecture enables independent scaling of the components that will be in high-demand during traffic spikes fulfilling the scalability requirement. Also through leveraging AKS, we can utilize multiple clusters and geo-redundancy to ensure the strict uptime requirements are met. Furthermore, since each microservice can be isolated, if one service fails, it can be isolated and fixed without taking down the entire system.
 
-#### SQL database cluster storing sensitive customer and operational data
+#### SQL Database Cluster
 During the assessment for the SQL database cluster, we will use Azure Migrate Database Assessment tool to:
 1. Analyze the compatibility of the current SQL database schema and data with Azure SQL Managed Instance.
 2. Identify dependencies on legacy systems and connected applications.
@@ -84,18 +84,18 @@ The table below shows the timeframe required for each task in the planning phase
 2. Plan the migration
   - We will have to look at the current system and pinpoint key services that the company will need, as well as dependencies on other services. This helps the company pick a suitable cloud ERP provider as well as an appropriate migration approach. We have decided on incremental migration as it is less disruptive, flexible, and is easier for testing and validation. 
 
-#### SQL database cluster
+#### SQL Database Cluster
 1. Select Target:
-For GlobalTech Solutions, we concidered to do refactoring its applications to adopt microservices or modern architecture. In this case, we decided to use Use Azure SQL Database.
+    - For GlobalTech Solutions, we concidered to do refactoring its applications to adopt microservices or modern architecture. In this case, we decided to use Use Azure SQL Database.
 2. Define Migration Methodology:
-- For minimal downtime, use Azure Database Migration Service (DMS) in online migration mode.
-- Plan a fallback strategy in case of migration issues.
+    - For minimal downtime, use Azure Database Migration Service (DMS) in online migration mode.
+    - Plan a fallback strategy in case of migration issues.
 3. Compliance Planning:
-- Use Azure Policy to enforce GDPR/HIPAA compliance.
-- Enable Transparent Data Encryption (TDE) for data-at-rest.
+    - Use Azure Policy to enforce GDPR/HIPAA compliance.
+    - Enable Transparent Data Encryption (TDE) for data-at-rest.
 4. Network and Access Configuration:
-- Plan VNet Integration and Firewall Rules for secure connectivity.
-- Enable Azure Active Directory Authentication for secure user access.
+    - Plan VNet Integration and Firewall Rules for secure connectivity.
+    - Enable Azure Active Directory Authentication for secure user access.
 
 ### Phase 3: Execution
 
@@ -111,21 +111,16 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
   - Perform tests for functionality, performance and security
 
 
-#### SQL database cluster
+#### SQL Database Cluster
 1. Backup and Pre-Migration Testing:
-- Take a full backup of the SQL database and test it for corruption or inconsistencies.
+    - Take a full backup of the SQL database and test it for corruption or inconsistencies.
 2. Migration Execution:
-- Configure Azure Database Migration Service to migrate the database.
-- Monitor progress and validate intermediate stages.
+    - Configure Azure Database Migration Service to migrate the database.
+    - Monitor progress and validate intermediate stages.
 3. Performance Testing:
-- Conduct performance benchmarking to compare pre- and post-migration performance.
+    - Conduct performance benchmarking to compare pre- and post-migration performance.
 
 #### Phase 4: Validation
-
-#### SQL database cluster
-- Validate data integrity and application connectivity.
-- Run end-to-end testing with connected systems.
-- Ensure all compliance measures are functional.
 
 
 ### Recommendations for Tools and Services
@@ -135,7 +130,7 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
 **Azure Kubernetes Service**: Orchestrate the microservices\
 **Azure Database Migration Service (DMS)**: For schema and data migration.\
 **Azure Monitor**: For tracking performance metrics post-migration.\
-**Azure Key Vault**: For securing encryption keys.\
+**Azure Key Vault**: For securing encryption keys.
 
 ### Address Legacy System Modernization
 
@@ -200,11 +195,11 @@ The company would first have to evaluate its current ERP system, its configurati
 
 
 ### Cost Estimation
-3y reserved
-Azure hybrid for everything
+3-Year reserved and Azure hybrid for everything
 
 #### Virtual Machines
-- 50 vms - 20 Canada central, 20 Sweden central, 10 south east Asia linux
+- 50 vms - 20 Canada central, 20 Sweden central, 10 south east Asia 
+- linux
 - d2s v3, 8GB ram
 
 #### ERP system 
@@ -227,8 +222,8 @@ AKS:
 - tier: standard
 
 #### Database:
-- 9 sql db: 2 (ERP) + 5(e-commerce applications) + 1 (customer and operational data)
-    - one for each micro services, best practices, recommended to avoid bottleneck
+- 9 sql database: 2 (ERP) + 5(e-commerce applications) + 1 (customer and operational data)
+    - one for each micro services, It is the best practices and recommended to avoid bottleneck
     - Bussines critical
     - stanand Series Gen5
     - 8v cores
@@ -236,7 +231,7 @@ AKS:
     - Geo redundancy
     - storage data 32GB  
 - 2 cosmos db: ERP + payroll
-    -multi-region: Canada central, Sweden central, south east Asia
+    - multi-region: Canada central, Sweden central, south east Asia
 - 1 general storage account for everything else: Sweden central
     - blog storage
     - standrad
@@ -278,4 +273,8 @@ AKS:
 
 
 ### Compliance and Security
-
+- Disaster Recovery:
+    - Configure Azure SQL Geo-Replication for high availability and disaster recovery.
+    - Regularly test failover scenarios.
+- Regulatory Compliance:
+    - Use Azure Compliance Manager to manage compliance requirements like GDPR and HIPAA.
