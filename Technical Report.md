@@ -144,7 +144,7 @@ What we know:
 
 The current architecture could be:
 
-Hardware
+**Hardware**
 
 1. Mainframe server: The server could be centralized, largely scaled and have high performance for a multinational company. IBM Z Series can be used to handle the requirements needed for a payroll and reporting system (high volumes & traffic of data processing) and is standard with legacy systems.
 
@@ -152,7 +152,7 @@ Hardware
 
 3. Backups/Archive: Tape drives were often used to archive data and serve as a backup, as they are cost effective and reliable for an on-prem solution.
 
-Software
+**Software**
 
 1. Operating System: Linux OS could've been used and is the industry standard, and offers strong features such as the extensive libraries and development tools, and easily integrates with containerization services and virtual machines.
 
