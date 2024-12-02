@@ -99,6 +99,17 @@ The table below shows the timeframe required for each task in the planning phase
 
 ### Phase 3: Execution
 
+#### ERP System
+1. Data Migration
+  - Move data from the old ERP system to the new SaaS system
+    -   Data cleansing and transformation
+2.  Prepare the cloud environment
+  - Set up the desired modules on the SaaS system based on business needs
+3. Integrate with other systems
+  - Configure and integrate so that other services (such as Azure services) can communicate with the new ERP system
+4. Testing
+  - Perform tests for functionality, performance and security
+
 
 #### SQL Database Cluster
 1. Backup and Pre-Migration Testing:
@@ -122,6 +133,49 @@ The table below shows the timeframe required for each task in the planning phase
 **Azure Key Vault**: For securing encryption keys.
 
 ### Address Legacy System Modernization
+
+To address the legacy system, we must first make some assumptions about the current architecture.
+
+What we know: 
+- The legacy system is used for employee payroll and reporting.
+- The system is reaching the end of its support lifecycle.
+
+The current architecture could be:
+
+Hardware
+
+1. Mainframe server: The server could be centralized, largely scaled and have high performance for a multinational company. IBM Z Series can be used to handle the requirements needed for a payroll and reporting system (high volumes & traffic of data processing) and is standard with legacy systems.
+
+2. Storage: Storage Area Networks (SAN) could've been sed to store the data. It offers data redundancy and failover mechanisms, which can be great when dealing with payrolls to not cause any errors with the customer and miss any costs/overcost.
+
+3. Backups/Archive: Tape drives were often used to archive data and serve as a backup, as they are cost effective and reliable for an on-prem solution.
+
+Software
+
+1. Operating System: Linux OS could've been used and is the industry standard, and offers strong features such as the extensive libraries and development tools, and easily integrates with containerization services and virtual machines.
+
+2. Payroll Application: For the application that handles payrolls, GlobalTech likely uses their own developped application through the company, hosted on a legacy computer.
+
+3. Database: SQL Database is the reliable way to handle the data and it is compatible with most systems, and easily migratable or scalable.
+
+To visualize the architecture of the legacy system, we have a concept diagram of it.
+
+![LegacyMainframeSystem](./LegacyMainframeSystem.png)
+
+Migrating to Azure
+
+Tools to be used:
+Azure Migrate for the VMs
+Azure DMS for the database
+AzCopy to copy the Storage
+
+1. PayrollAppService: For the PayrollAppService, we can refactor and migrate the software into an Azure App Service to handle payrolls and reports while also offering the user interface platform for employees.
+
+2. Database: The database can be migrated to an Azure SQL Database. This offers many features and reduces admin requirements, while still being fully managed. 1 Database with geo-redundant storage
+
+3. Storage: For storage, we can migrate from the SAN to the Azure Blob Storage. It offers features such as the storage tiers, lifecycle management and integration with other Azure services.
+
+4. Backups/Archive: For backups/archives, we can use Azure Backup. Azure Backup is great because it can seamlessly interact with Azure Blob Storage and the database without any infrastructure management, which makes migration even easier.
 
 #### ERP System Modernization
 For the legacy monolithic ERP system, we have decided to replace/refactor the system with a cloud based ERP system. The legacy ERP system has numerous issues that make it increasingly difficult to continue using. The legacy ERP system is nearing the end of its support, this means that the vendor will no longer provide updates, patches, nor technical support for that system version. 
