@@ -20,11 +20,6 @@ During the assessment for the ERP system, we will assess and understand the curr
 
 Additionally, it is essential to define GlobalTech Solutions’ business goals, which involves determining which services and modules should be retained. What is the company’s main focus or motivation for this migration? Scalability, flexibility, cost-effectiveness, innovation, expansion, compliance?
 
-**Tools for Assessment**
-Azure Migrate: discover and assess on-premise workloads, and the suitability of moving workloads to the cloud
-- Azure Migrate: Server Assessment, Azure Migrate: Database Assessment
-<br/>Azure Advisor: A free tool that provides best practices to optimize cost, security, and performance
-
 #### <ins>Public-facing e-commerce Application</ins>
 
 <ins>Overview of component</ins>
@@ -42,12 +37,6 @@ Due to the monolithic design of the application, the requirements that the compa
 <ins>Migration Goals</ins>
 
 By breaking down the application into microservices, containerizing them with Docker and orchestrating them using Azure Kubernetes Service (AKS), the requirements of the company are met. Transitioning to a microservice architecture enables independent scaling of the components that will be in high-demand during traffic spikes fulfilling the scalability requirement. Also through leveraging AKS, we can utilize multiple clusters and geo-redundancy to ensure the strict uptime requirements are met. Furthermore, since each microservice can be isolated, if one service fails, it can be isolated and fixed without taking down the entire system.
-
-<ins>Recommended Tools for Migration</ins>
-
-**Azure Migrate**: assess dependencies and readiness for migration to Azure\
-**Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it\
-**Azure Kubernetes Service**: Orchestrate the microservices
 
 #### SQL database cluster storing sensitive customer and operational data
 During the assessment for the SQL database cluster, we will use Azure Migrate Database Assessment tool to:
@@ -95,18 +84,47 @@ The table below shows the timeframe required for each task in the planning phase
 2. Plan the migration
   - We will have to look at the current system and pinpoint key services that the company will need, as well as dependencies on other services. This helps the company pick a suitable cloud ERP provider as well as an appropriate migration approach. We have decided on incremental migration as it is less disruptive, flexible, and is easier for testing and validation. 
 
+#### SQL database cluster
+1. Select Target:
+For GlobalTech Solutions, we concidered to do refactoring its applications to adopt microservices or modern architecture. In this case, we decided to use Use Azure SQL Database.
+2. Define Migration Methodology:
+- For minimal downtime, use Azure Database Migration Service (DMS) in online migration mode.
+- Plan a fallback strategy in case of migration issues.
+3. Compliance Planning:
+- Use Azure Policy to enforce GDPR/HIPAA compliance.
+- Enable Transparent Data Encryption (TDE) for data-at-rest.
+4. Network and Access Configuration:
+- Plan VNet Integration and Firewall Rules for secure connectivity.
+- Enable Azure Active Directory Authentication for secure user access.
+
+### Phase 3: Execution
 
 
-Phase 3: Execution
+#### SQL database cluster
+1. Backup and Pre-Migration Testing:
+- Take a full backup of the SQL database and test it for corruption or inconsistencies.
+2. Migration Execution:
+- Configure Azure Database Migration Service to migrate the database.
+- Monitor progress and validate intermediate stages.
+3. Performance Testing:
+- Conduct performance benchmarking to compare pre- and post-migration performance.
 
+#### Phase 4: Validation
 
-Phase 4: Validation
-
-
+#### SQL database cluster
+- Validate data integrity and application connectivity.
+- Run end-to-end testing with connected systems.
+- Ensure all compliance measures are functional.
 
 
 ### Recommendations for Tools and Services
-
+**Azure Migrate**: Assess dependencies and readiness for migration to Azure. Discover and assess on-premise workloads, and the suitability of moving workloads to the cloud\
+**Azure Advisor**: A free tool that provides best practices to optimize cost, security, and performance\
+**Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it\
+**Azure Kubernetes Service**: Orchestrate the microservices\
+**Azure Database Migration Service (DMS)**: For schema and data migration.\
+**Azure Monitor**: For tracking performance metrics post-migration.\
+**Azure Key Vault**: For securing encryption keys.\
 
 ### Address Legacy System Modernization
 
@@ -140,13 +158,13 @@ AKS:
 
 #### Database:
 - 9 sql db: 2 (ERP) + 5(e-commerce applications) + 1 (customer and operational data)
-    -one for each micro services, best practices, recommended to avoid bottleneck
-    -Bussines critical
-    -stanand Series Gen5
-    -8v cores
-    -geo replica
-    -Geo redundancy
-    -storage data 32GB  
+    - one for each micro services, best practices, recommended to avoid bottleneck
+    - Bussines critical
+    - stanand Series Gen5
+    - 8v cores
+    - geo replica
+    - Geo redundancy
+    - storage data 32GB  
 - 2 cosmos db: ERP + payroll
     -multi-region: Canada central, Sweden central, south east Asia
 - 1 general storage account for everything else: Sweden central
