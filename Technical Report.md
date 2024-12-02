@@ -9,7 +9,6 @@ This report provides a detailed migration strategy for the existing infrastructu
 ### Migration Phases
 Phase 1: Assessment
 
-
 ### Phase 2: Planning
 The table below shows the timeframe required for each task in the planning phase. The tasks can run concurrently, but the total duration is approximately 8-14 weeks
 
@@ -51,7 +50,6 @@ Phase 3: Execution
 Phase 4: Validation
 
 
-Phase 5: Optimization and Handover
 
 
 ### Recommendations for Tools and Services
@@ -64,7 +62,7 @@ Phase 5: Optimization and Handover
 3y reserved
 Azure hybrid for everything
 
-#### virtual machines
+#### Virtual Machines
 - 50 vms - 20 Canada central, 20 Sweden central, 10 south east Asia linux
 - d2s v3, 8GB ram
 
@@ -74,13 +72,13 @@ Azure hybrid for everything
 - microsoft dynamics 365 finance: 210/user
 - microsoft dynamics 365 intelligent order management: 
 
-#### Payroll and reporting system
+#### Payroll and Reporting System
 Web App Services: 1
-Canada central
-Tier: standard
-Instance: S2
+- Canada central
+- Tier: standard
+- Instance: S2
 
-#### e-commerce applications
+#### E-commerce Applications
 AKS:
 - 3 clusters: high availability, failover
 - D4AS standard
@@ -89,50 +87,51 @@ AKS:
 
 #### Database:
 - 9 sql db: 2 (ERP) + 5(e-commerce applications) + 1 (customer and operational data)
-one for each micro services, best practices, recommended to avoid bottleneck
-Bussines critical
-stanand Series Gen5
-8v cores
-geo replica
-Geo redundancy
-storage data 32GB  
+    -one for each micro services, best practices, recommended to avoid bottleneck
+    -Bussines critical
+    -stanand Series Gen5
+    -8v cores
+    -geo replica
+    -Geo redundancy
+    -storage data 32GB  
 - 2 cosmos db: ERP + payroll
-multi-region: Canada central, Sweden central, south east Asia
+    -multi-region: Canada central, Sweden central, south east Asia
 - 1 general storage account for everything else: Sweden central
-blog storage
-standrad
-geo-redandunt
-1TB
-3y reserved
+    - blog storage
+    - standrad
+    - geo-redandunt
+    - 1TB
+    - 3y reserved
 - Azure Monitor:
-Sweden central
+    - Sweden central
 - Vnets 2:
-Sweden central ->Canada central, Sweden central -> south east Asia
+    - Sweden central ->Canada central, Sweden central -> south east Asia
 - load balancer 3: 
-Sweden central Canada central  south east Asia
-tier: standard
-- application gateway 3: Sweden central Canada central  south east Asia
-standard v2
-- VPN gateway 3: Sweden central Canada central  south east Asia
-basic vpn
-- traffic manager
-Canada central
-3 endploints
-- retention policy
-1 interactive retention - default
-31 days - free
+    - Sweden central, Canada central, south east Asia
+    - tier: standard
+- Application Gateway 3: 
+    - Sweden central, Canada central, south east Asia
+    - standard v2
+- VPN gateway 3: 
+    - Sweden central, Canada central, south east Asia
+    - basic vpn
+- Traffic Manager
+    - Canada central
+    - 3 endploints
+- Retention Policy
+    - 1 interactive retention - default
+    - 31 days - free
 - DDos
-Canada central
-Tier:network protection
-Vnets 
+    - Canada central
+    - Tier:network protection
 
 - Migration Tool:
-1. Azure Migrate - free
-2. Azure database Migration services - free
-Canada central
-standard
+    - Azure Migrate - free
+    - Azure database Migration services - free
+        - Canada central
+        - standard
 
-Total $44,532.92
+**Total $44,532.92**
 
 
 ### Compliance and Security
