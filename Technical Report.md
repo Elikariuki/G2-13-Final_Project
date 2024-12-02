@@ -40,8 +40,8 @@ By breaking down the application into microservices, containerizing them with Do
 
 <ins>Recommended Tools for Migration</ins>
 
-**Azure Migrate**: assess dependencies and readiness for migration to Azure
-**Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it
+**Azure Migrate**: assess dependencies and readiness for migration to Azure\
+**Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it\
 **Azure Kubernetes Service**: Orchestrate the microservices
 
 
