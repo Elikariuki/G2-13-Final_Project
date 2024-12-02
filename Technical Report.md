@@ -120,6 +120,8 @@ AKS:
     - geo-redandunt
     - 1TB
     - 3y reserved
+
+#### Security and Monitoring
 - Azure Monitor:
     - Sweden central
 - Vnets 2:
@@ -143,11 +145,11 @@ AKS:
     - Canada central
     - Tier:network protection
 
-- Migration Tool:
-    - Azure Migrate - free
-    - Azure database Migration services - free
-        - Canada central
-        - standard
+#### Migration Tool:
+- Azure Migrate - free
+- Azure database Migration services - free
+    - Canada central
+    - standard
 
 **Total $44,532.92**
 
