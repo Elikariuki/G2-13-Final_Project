@@ -80,6 +80,8 @@ The table below shows the timeframe required for each task in the planning phase
 |                                        | Testing and Validation           | 2-4 weeks          |
 |                                        | **Total Estimated Time**         | **8-14 weeks**     |
 
+#### Virtual Machines
+The virtual machines will be migrated to Azure using Azure Migrate. The migration process will be done in phases to ensure minimal downtime and to allow for testing and validation of the migrated workloads. As there is a mix of both modern and legacy systems , the migration process will be tailored to each system's specific requirements. The modern systems will be migrated using Azure Migrate's automated migration tools, while the legacy systems will require to be refactored to be compatible with Azure. Azure site recovery will be used to ensure business continuity during the migration process.
 
 #### ERP Migration Planning
 1. Decide on migration strategy
