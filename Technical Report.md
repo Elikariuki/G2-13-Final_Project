@@ -128,6 +128,20 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
 
 ### Address Legacy System Modernization
 
+#### ERP System Modernization
+For the legacy monolithic ERP system, we have decided to replace/refactor the system with a cloud based ERP system. The legacy ERP system has numerous issues that make it increasingly difficult to continue using. The legacy ERP system is nearing the end of its support, this means that the vendor will no longer provide updates, patches, nor technical support for that system version. 
+
+This may cause significant issues as GlobalTech Solutions will no longer be getting new features and updates essential for the company’s expansion and growth. The system will be unable to integrate with possible newer technologies or services. This also presents a significant security risk, as staying current with the latest security practices is crucial.
+
+Another thing to look at is the monolithic design. This is problematic as the different business management products (including financial and inventory management) are tightly coupled. Any change in one part of the system will often require changes in other parts, making it more difficult to add new features or any other changes, reducing its ability to scale. 
+
+There are a couple of options to migrate this system: replace with PaaS, replace with SaaS, or replace with a custom-built ERP system. PaaS and custom-built offers more control and customization, however, the objectives of the migration include minimizing operational disruption, supporting scalability and modernization. PaaS and custom-built options require a significant amount of effort, time and expertise; the company may have to acquire more resources, funding, and IT staff with the knowledge to build and/or maintain ERP systems. Whereas the SaaS options are ready to use without the need to download or configure any core functionalities. SaaS vendors take care of all the maintenance, updates and patches. This option is also cost effective as SaaS services are usually subscription-based; pay per-user, per-month basis. Additionally, the SaaS ERP system handles scalability and security, ensuring smooth growth and protection. 
+
+For these reasons, we think it would be best to replace this with a cloud-based version (SaaS). Cloud-based ERP systems such as NetSuite and Microsoft Dynamics 365 are hosted and managed by the provider. SaaS provides faster deployment, cost-effectiveness, and low maintenance. 
+“The cloud provider patches, manages, and updates the software several times a year—rather than an expensive upgrade every 5 to 10 years with an on-premises system. The cloud can reduce both operational expenses (OpEx) and capital expenses (CapEx) because it eliminates the need for companies to purchase software and hardware, or hire additional IT staff” (What is Erp?). 
+
+The company would first have to evaluate its current ERP system, its configurations, integrations and dependencies. A good SaaS option for this migration is Microsoft Dynamics 365, as it is owned by Microsoft so it can easily be integrated with Azure resources and services. After choosing which services/modules to use from Microsoft Dynamics 365, the company would have to refactor the databases so that each microservice has its own database, following the twelve-factor methodology. This ensures faster deployment, flexibility, fault isolation, reduced downtown, and fewer bottlenecks. Following the incremental migration strategy, a small part of the system will be transferred to the SaaS ERP system, integrations with dependencies will be tested and then deployed. This will be the process until the entire ERP system has been successfully migrated. 
+
 
 ### Cost Estimation
 3y reserved
