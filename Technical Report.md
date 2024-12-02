@@ -49,7 +49,11 @@ By breaking down the application into microservices, containerizing them with Do
 **Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it\
 **Azure Kubernetes Service**: Orchestrate the microservices
 
-
+#### SQL database cluster storing sensitive customer and operational data
+During the assessment for the SQL database cluster, we will use Azure Migrate Database Assessment tool to:
+1. Analyze the compatibility of the current SQL database schema and data with Azure SQL Managed Instance.
+2. Identify dependencies on legacy systems and connected applications.
+3. Estimate the data size and identify performance bottlenecks.
 
 ### Phase 2: Planning
 The table below shows the timeframe required for each task in the planning phase. The tasks can run concurrently, but the total duration is approximately 8-14 weeks
