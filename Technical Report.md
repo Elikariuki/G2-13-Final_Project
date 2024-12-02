@@ -95,7 +95,18 @@ The table below shows the timeframe required for each task in the planning phase
 2. Plan the migration
   - We will have to look at the current system and pinpoint key services that the company will need, as well as dependencies on other services. This helps the company pick a suitable cloud ERP provider as well as an appropriate migration approach. We have decided on incremental migration as it is less disruptive, flexible, and is easier for testing and validation. 
 
-
+#### SQL database cluster
+1. Select Target:
+For GlobalTech Solutions, we concidered to do refactoring its applications to adopt microservices or modern architecture. In this case, we decided to use Use Azure SQL Database.
+2. Define Migration Methodology:
+- For minimal downtime, use Azure Database Migration Service (DMS) in online migration mode.
+- Plan a fallback strategy in case of migration issues.
+3. Compliance Planning:
+- Use Azure Policy to enforce GDPR/HIPAA compliance.
+- Enable Transparent Data Encryption (TDE) for data-at-rest.
+4. Network and Access Configuration:
+- Plan VNet Integration and Firewall Rules for secure connectivity.
+- Enable Azure Active Directory Authentication for secure user access.
 
 Phase 3: Execution
 
