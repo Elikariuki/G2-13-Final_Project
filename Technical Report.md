@@ -8,7 +8,12 @@ This report provides a detailed migration strategy for the existing infrastructu
 ![Proposed Cloud Architecture](Architecture.png)
 
 ### Migration Phases
-Phase 1: Assessment
+### Phase 1: Assessment
+
+#### Virtual Machines
+GlobalTech Solutions currently operates 150 virtual machines running a mix of Windows Server and Linux, supporting public-facing e-commerce applications with strict uptime requirements. The primary challenges include rising operational costs, the need for scalable infrastructure to support future growth, and minimizing downtime during migration to avoid disrupting critical services. 
+
+The migration goals are to rehost these VMs to Azure using Azure Migrate, improve the performance and reliability of e-commerce applications, ensure compliance with international regulations such as GDPR and HIPAA, and reduce operational costs through Azure's pay-as-you-go model. Given the legacy nature of some VMs and applications, refactoring them to better leverage cloud-native features could further enhance scalability and performance.
 
 #### ERP System Assessment
 During the assessment for the ERP system, we will assess and understand the current on-premise ERP system, document the ERP system components, integrations, dependencies, and configurations. The current monolithic ERP system contains all of its modules/business functions in one single application, and most likely share the same database. Understanding how these components interact with each other and with other systems will allow the company to carefully plan for a smooth migration, reducing potential risks and downtown. The company will also decide what services are no longer needed, and what services they want to keep, expand and/or grow. Another key task is evaluating the current performance to ensure that the new ERP system can match or exceed it.
