@@ -139,7 +139,9 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
 
 ### Address Legacy System Modernization
 
-To address the legacy system, we must first make some assumptions about the current architecture.
+#### Payroll & Report System Modernization
+
+To address the legacy payroll system, we must first make some assumptions about the current architecture.
 
 What we know: 
 - The legacy system is used for employee payroll and reporting.
