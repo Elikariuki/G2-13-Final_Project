@@ -156,8 +156,10 @@ For the migration of the front-end application, we decided that a strategy of Li
 **Azure Kubernetes Service**: Orchestrate the microservices\
 **Azure Database Migration Service (DMS)**: For schema and data migration.\
 **Azure Monitor**: For tracking performance metrics post-migration.\
-**Azure Key Vault**: For securing encryption keys.
-**Azure DevOps**: To migrate payroll app to App Service.
+**Azure Key Vault**: For securing encryption keys.\
+**Azure DevOps**: To migrate payroll app to App Service.\
+**Azure VPN Gateway**: Enables security through encrypted traffic.\
+**Azure Logic Apps**: Automates workflows to integrate Dynamics 365 with Azure resources.
 
 ### Address Legacy System Modernization
 
