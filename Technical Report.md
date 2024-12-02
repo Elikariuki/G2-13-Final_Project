@@ -20,6 +20,31 @@ Azure Migrate: discover and assess on-premise workloads, and the suitability of 
 - Azure Migrate: Server Assessment, Azure Migrate: Database Assessment
 <br/>Azure Advisor: A free tool that provides best practices to optimize cost, security, and performance
 
+#### <ins>Public-facing e-commerce Application</ins>
+
+<ins>Overview of component</ins>
+
+The public-facing e-commerce application is the front-end of the company that the customers will be faced with when interacting with the system. This application is assumed to have functions such as product inventory, checkout, etc. When migrating to the cloud, strict uptime, scalability and disaster recovery capabilities to support future growth are requirements.
+
+<ins>Current State of the System</ins>
+
+Currently the application operates as a monolithic application that is hosted on the on-premises virtual machines. Using Azure Migrate, we can identify the dependencies that the application may have such as a dependency on the in-house SQL database.
+
+<ins>Challenges of Current System</ins>
+
+Due to the monolithic design of the application, the requirements that the company requires have already failed. Scalability is not feasible due to the design of the application being unable to handle traffic spikes,and fault tolerance fails due to the nature of a monolithic system and how it brings down the entire application since isolation of a failure is not possible.
+
+<ins>Migration Goals</ins>
+
+By breaking down the application into microservices, containerizing them with Docker and orchestrating them using Azure Kubernetes Service (AKS), the requirements of the company are met. Transitioning to a microservice architecture enables independent scaling of the components that will be in high-demand during traffic spikes fulfilling the scalability requirement. Also through leveraging AKS, we can utilize multiple clusters and geo-redundancy to ensure the strict uptime requirements are met. Furthermore, since each microservice can be isolated, if one service fails, it can be isolated and fixed without taking down the entire system.
+
+<ins>Recommended Tools for Migration</ins>
+
+**Azure Migrate**: assess dependencies and readiness for migration to Azure
+**Azure Site Recovery**: lift existing e-commerce platform to VMs to gradually modernize it
+**Azure Kubernetes Service**: Orchestrate the microservices
+
+
 
 ### Phase 2: Planning
 The table below shows the timeframe required for each task in the planning phase. The tasks can run concurrently, but the total duration is approximately 8-14 weeks
