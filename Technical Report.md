@@ -1,5 +1,7 @@
 # Introduction
 
+This report provides a detailed migration strategy for the existing infrastructure of GlobalTech Solutions. The report outlines a comprehensive overview of the planned transition to a new cloud-based platform. The report will describe the proposed cloud infrastructure and the step-by-step migration plan using Microsoft Azure. By leveraging Azure's services, GlobalTech Solutions will achieve enhanced scalability, performance, and compliance with international regulations.
+
 ## Migration Strategy for SQL Database Cluster on Azure
 
 ### High-Level Architecture Diagram
