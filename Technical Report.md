@@ -96,6 +96,11 @@ The table below shows the timeframe required for each task in the planning phase
 4. Network and Access Configuration:
     - Plan VNet Integration and Firewall Rules for secure connectivity.
     - Enable Azure Active Directory Authentication for secure user access.
+  
+#### Public-facing E-commerce Application Migration
+
+For the migration of the front-end application, we decided that a strategy of Lift-and-Shift with gradual modernization is the best approach. The monolithic system of the application is detrimental to the requirements of the company in terms of scalability, uptime, and disaster recovery capabilities. By first using Azure Migrate and Azure Site Recovery to lift the existing system to VMs or Azure App Service, the uptime of the system is ensured during migration. By gradually modernizing the application and breaking it down into microservices that are containerized and orchestrated through Azure Kubernetes Services. We can scale each microservice as needed - furthermore, if there is a problem with one service, it can be isolated and fixed without the need to take down the entire system ensuring consistent uptime and availability.
+
 
 ### Phase 3: Execution
 
