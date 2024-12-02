@@ -20,6 +20,10 @@ During the assessment for the ERP system, we will assess and understand the curr
 
 Additionally, it is essential to define GlobalTech Solutions’ business goals, which involves determining which services and modules should be retained. What is the company’s main focus or motivation for this migration? Scalability, flexibility, cost-effectiveness, innovation, expansion, compliance?
 
+#### Payroll System Assessment
+
+We will document all the neccessary components in the system while identifying the problems with the current payroll system and identifying what requires changes. It is also important to keep in mind the employees of GlobalTech and getting their input on a new payroll system, as it benefits them the most.
+
 #### <ins>Public-facing e-commerce Application</ins>
 
 <ins>Overview of component</ins>
@@ -84,6 +88,12 @@ The table below shows the timeframe required for each task in the planning phase
 2. Plan the migration
   - We will have to look at the current system and pinpoint key services that the company will need, as well as dependencies on other services. This helps the company pick a suitable cloud ERP provider as well as an appropriate migration approach. We have decided on incremental migration as it is less disruptive, flexible, and is easier for testing and validation. 
 
+#### Payroll System Migration Planning
+1. Migration strategy:
+    - Completely refactoring and replacing the old payroll application is the optimal choice as it's nearing the end of its support lifecycle.
+2. Ensure minimal downtime
+    - The payroll application is crucial for employees at GlobalTech, and will need to have minimal downtime during migration.
+
 #### SQL Database Cluster
 1. Select Target:
     - For GlobalTech Solutions, we concidered to do refactoring its applications to adopt microservices or modern architecture. In this case, we decided to use Use Azure SQL Database.
@@ -115,6 +125,17 @@ For the migration of the front-end application, we decided that a strategy of Li
 4. Testing
   - Perform tests for functionality, performance and security
 
+#### Payroll System
+
+1. Backup
+    - Make a backup of the payroll and reporting data from the storage and the database
+2. Copy Payroll app infrastructure code
+3. Migration
+    - Use Azure Database Migration Service to migrate the database
+    - Refactor the payroll app into an Azure App Service with the help of DevOps
+4. Application Testing
+    - Work with developers to test the new payroll application and ensure functionality.
+
 
 #### SQL Database Cluster
 1. Backup and Pre-Migration Testing:
@@ -136,6 +157,7 @@ For the migration of the front-end application, we decided that a strategy of Li
 **Azure Database Migration Service (DMS)**: For schema and data migration.\
 **Azure Monitor**: For tracking performance metrics post-migration.\
 **Azure Key Vault**: For securing encryption keys.
+**Azure DevOps**: To migrate payroll app to App Service.
 
 ### Address Legacy System Modernization
 
@@ -167,14 +189,11 @@ The current architecture could be:
 
 To visualize the architecture of the legacy system, we have a concept diagram of it.
 
-![LegacyMainframeSystem](./LegacyMainframeSystem.png)
+![LegacyMainframeDiagram](./LegacyMainframeDiagram.png)
 
-Migrating to Azure
+**Modernizing the Payroll App**
 
-Tools to be used:
-Azure Migrate for the VMs
-Azure DMS for the database
-AzCopy to copy the Storage
+For the legacy payroll & report app, we have decided to refactor the application and have it managed by an Azure App Service.
 
 1. PayrollAppService: For the PayrollAppService, we can refactor and migrate the software into an Azure App Service to handle payrolls and reports while also offering the user interface platform for employees.
 
