@@ -149,7 +149,9 @@ For the migration of the front-end application, we decided that a strategy of Li
     - Conduct performance benchmarking to compare pre- and post-migration performance.
 
 #### Phase 4: Validation
-
+- Validate data integrity and application connectivity.
+- Run end-to-end testing with connected systems.
+- Ensure all compliance measures are functional.
 
 ### Recommendations for Tools and Services
 **Azure Migrate**: Assess dependencies and readiness for migration to Azure. Discover and assess on-premise workloads, and the suitability of moving workloads to the cloud\
