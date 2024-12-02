@@ -99,6 +99,17 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
 
 ### Phase 3: Execution
 
+#### ERP System
+1. Data Migration
+  - Move data from the old ERP system to the new SaaS system
+    -   Data cleansing and transformation
+2.  Prepare the cloud environment
+  - Set up the desired modules on the SaaS system based on business needs
+3. Integrate with other systems
+  - Configure and integrate so that other services (such as Azure services) can communicate with the new ERP system
+4. Testing
+  - Perform tests for functionality, performance and security
+
 
 #### SQL database cluster
 1. Backup and Pre-Migration Testing:
