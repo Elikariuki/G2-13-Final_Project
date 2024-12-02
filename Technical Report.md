@@ -10,7 +10,39 @@ This report provides a detailed migration strategy for the existing infrastructu
 Phase 1: Assessment
 
 
-Phase 2: Planning
+### Phase 2: Planning
+The table below shows the timeframe required for each task in the planning phase. The tasks can run concurrently, but the total duration is approximately 8-14 weeks
+
+1. Shortest Possible Duration: 7 weeks (if all tasks are done in parallel and without delays)
+2. Longest Possible Duration: 14 weeks (considering potential overlaps and delays)
+
+
+
+| **Component**                          | **Task**                         | **Estimated Time** |
+|----------------------------------------|----------------------------------|--------------------|
+| **Rehosting using Azure Migrate**      |                                  |                    |
+|                                        | Assessment and Planning          | 1-2 weeks          |
+|                                        | Replication and Migration        | 2-4 weeks          |
+|                                        | Testing and Validation           | 1-2 weeks          |
+|                                        | **Total Estimated Time**         | **4-8 weeks**      |
+| **ERP System (Microsoft Dynamics 365)**|                                  |                    |
+|                                        | Planning and Setup               | 2-4 weeks          |
+|                                        | Data Migration                   | 2-4 weeks          |
+|                                        | Configuration and Customization  | 2-4 weeks          |
+|                                        | Training and Go-Live             | 1-2 weeks          |
+|                                        | **Total Estimated Time**         | **7-14 weeks**     |
+| **SQL Database**                       |                                  |                    |
+|                                        | Assessment and Planning          | 1-2 weeks          |
+|                                        | Data Migration                   | 2-4 weeks          |
+|                                        | Testing and Optimization         | 1-2 weeks          |
+|                                        | **Total Estimated Time**         | **4-8 weeks**      |
+| **Mainframe System**                   |                                  |                    |
+|                                        | Assessment and Planning          | 2-4 weeks          |
+|                                        | Rehosting and Migration          | 4-6 weeks          |
+|                                        | Testing and Validation           | 2-4 weeks          |
+|                                        | **Total Estimated Time**         | **8-14 weeks**     |
+
+
 
 
 Phase 3: Execution
