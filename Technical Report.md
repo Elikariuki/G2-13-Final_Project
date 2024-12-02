@@ -108,10 +108,19 @@ For GlobalTech Solutions, we concidered to do refactoring its applications to ad
 - Plan VNet Integration and Firewall Rules for secure connectivity.
 - Enable Azure Active Directory Authentication for secure user access.
 
-Phase 3: Execution
+### Phase 3: Execution
 
 
-Phase 4: Validation
+#### SQL database cluster
+1. Backup and Pre-Migration Testing:
+- Take a full backup of the SQL database and test it for corruption or inconsistencies.
+2. Migration Execution:
+- Configure Azure Database Migration Service to migrate the database.
+- Monitor progress and validate intermediate stages.
+3. Performance Testing:
+- Conduct performance benchmarking to compare pre- and post-migration performance.
+
+#### Phase 4: Validation
 
 
 
